@@ -34,28 +34,28 @@ const createCard = (vacancy) => {
     card.classList.add('result__item');
 
  
-    card.insertAdjacentHTML('afterbegin', `
-          <article class="vacancy">
-          <h2 class="vacancy__title">
-              <a class="vacancy__open-modal" href="#" data-vacancy="${id}">${title}</a>
-          </h2>
-          <p class="vacancy__compensation">${compensation}</p>
-          <p class="vacancy__work-schedule">${workSchedule}</p>
-          <div class="vacancy__employer">
-              <p class="vacancy__employer-title">${employer}</p>
-              <p class="vacancy__employer-address">${address}</p>
-          </div>
-          <p class="vacancy__description">${description}</p>
+    card.insertAdjacentHTML('afterbegin', `  
 
-          <p class="vacancy__date">
-              <time datetime="2022-01-25">${date}</time>
-          </p>
-          <div class="vacancy__wrapper-btn">
-              <a class="vacancy__response vacancy__open-modal" href="#" data-vacancy="3515">Откликнуться</a>
-              <button class="vacancy__contacts">Показать контакты</button>
-          </div>
-          </article>
-
+    <article class="vacancy">
+        <h2 class="vacancy__title">
+            <a class="vacancy__open-modal" href="#" data-vacancy="${id}">${title}</a>
+        </h2>
+            <p class="vacancy__compensation">${compensation}</p>
+            <p class="vacancy__work-schedule">${workSchedule}</p>
+        <div class="vacancy__employer">
+            <p class="vacancy__employer-title">${employer}</p>
+            <p class="vacancy__employer-address">${address}</p>
+        </div>
+            <p class="vacancy__description">${description}</p>
+        
+            <p class="vacancy__date">
+                <time datetime="2022-01-25">${date}</time></p>
+        <div class="vacancy__wrapper-btn">
+            <a class="vacancy__response vacancy__open-modal" href="#" data-vacancy="3515">Откликнуться</a>
+            <button class="vacancy__contacts">Показать контакты</button>
+        </div>
+    </article>
+    
     `);
     return card;
 };
